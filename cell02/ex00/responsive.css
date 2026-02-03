@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+    height: 100vh;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 4vw;
+    border: 1px solid black;
+}
+
+.box-one {
+    background-color: lightblue;
+}
+
+.box-two {
+    background-color: lightcoral;
+}
