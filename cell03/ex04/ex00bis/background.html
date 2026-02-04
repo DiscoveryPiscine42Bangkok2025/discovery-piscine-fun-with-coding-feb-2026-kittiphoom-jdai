@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Background</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<button id="btn">Click me!</button>
+
+<script>
+$(function () {
+    $("#btn").click(function () {
+        let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        $("body").css("background-color", color);
+    });
+});
+</script>
+
+</body>
+</html>

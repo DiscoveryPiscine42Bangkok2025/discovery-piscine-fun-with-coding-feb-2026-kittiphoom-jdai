@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    #ft_list div {
+        border: 1px solid #ddd;
+        padding: 5px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    </style>
+
+<div class="container">
+    <h1>To Do List</h1>
+    <button id="new">New</button>
+    <div id="ft_list"></div>
+</div>
+
+<script>
+$(function () {
+
+    function setCookie(name, value) {
+        document.cookie = name + "=" + encodeURIComponent(value) + "; path=/";
+    }
+
+    function getCookie(name) {
+        let cookies = document.cookie.split("; ");
+        for (let c of cookies) {
+            let parts = c.split("=");
+            if (parts[0] === name)
+                return decodeURIComponent(parts[1]);
+        }
+        return "";
+    }
+
+    function saveTodos() {
+        let list = [];
+        $("#ft_list div").each(function () {
+            list.push($(this).text());
+        });
+        setCookie("todos", JSON.stringify(list));
+    }
+
+    function addTodo(text) {
+        let div = $("<div>").text(text);
+
+        div.click(function () {
+            if (confirm("Remove this TO DO?")) {
+                $(this).remove();
+                saveTodos();
+            }
+        });
+
+        $("#ft_list").prepend(div);
+        saveTodos();
+    }
+
+    $("#new").click(function () {
+        let text = prompt("New TO DO:");
+        if (text && text.trim() !== "") {
+            addTodo(text);
+        }
+    });
+
+    let data = getCookie("todos");
+    if (data) {
+        JSON.parse(data).reverse().forEach(function (t) {
+            addTodo(t);
+        });
+    }
+
+});
+</script>
+
+</body>
+</html>
