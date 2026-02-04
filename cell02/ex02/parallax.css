@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* parallax sections */
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* images */
+.img1 {
+    background-image: url("https://picsum.photos/1200/800?random=1");
+}
+
+.img2 {
+    background-image: url("https://picsum.photos/1200/800?random=2");
+}
+
+/* center text */
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+}
+
+/* middle block */
+.content {
+    background: black;
+    color: white;
+    padding: 100px;
+    text-align: center;
+    font-size: 24px;
+}
