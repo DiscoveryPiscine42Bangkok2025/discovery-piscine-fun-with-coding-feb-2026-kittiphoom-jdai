@@ -1,0 +1,45 @@
+body {
+  background: linear-gradient(#0e0e0e, #000);
+  color: white;
+  padding-top: 70px;
+}
+
+.navbar {
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+
+.accent {
+  color: #ff9000;
+}
+
+.card {
+  background: #151515;
+  border-radius: 8px;
+  color: #ff9000;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.5);
+}
+
+.card:hover .thumb {
+  transform: scale(1.03);
+}
+
+.thumb {
+  aspect-ratio: 4 / 5;
+  background-size: cover;
+  background-position: center;
+  transition: transform .3s ease;
+}
+
+/* Showcase Images */
+.thumb-1 { background-image: url("assets/img/1.jpg"); }
+.thumb-2 { background-image: url("assets/img/2.jpg"); }
+.thumb-3 { background-image: url("assets/img/3.jpg"); }
+.thumb-4 { background-image: url("assets/img/4.jpg"); }
+.thumb-5 { background-image: url("assets/img/5.jpg"); }
+.thumb-6 { background-image: url("assets/img/6.jpg"); }

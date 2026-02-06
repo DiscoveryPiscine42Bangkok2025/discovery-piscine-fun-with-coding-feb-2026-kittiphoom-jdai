@@ -1,0 +1,43 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(#0e0e0e, #000);
+  color: white;
+  padding-top: 70px;
+}
+
+.navbar {
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+
+.accent {
+  color: #ff9000;
+}
+
+.profile {
+  max-width: 900px;
+}
+
+.skill-card {
+  background: #151515;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.skill-card:hover {
+  background: #1f1f1f;
+}
+
+.skill-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
