@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>RushHub</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ทำให้เว็บ responsive บนมือถือ -->
 
 <!-- Bootstrap CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,8 +14,8 @@ body {
   color: rgb(255, 255, 255);
 }
 
-/* LOGO */
-.logo span:last-child {
+/* LOGO */ /* เลือกเฉพาะ span ตัวสุดท้ายใน logo */
+.logo span:last-child {    
   background: #ff9000;
   color: #000;
   padding: 2px 8px;
@@ -27,28 +27,18 @@ body {
 .card-box {
   background: #121212;
   border-radius: 10px;
-  overflow: hidden;
-  transition: .2s;
+  overflow: hidden; /* ซ่อนส่วนที่เกินกรอบ รูปไม่ล้น */
+  transition: .2s; /* ทำ animation */
 }
 .card-box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* การ์ดลอยขึ้น 5px */
 }
 
 /* IMAGE */
 .thumb {
-  height: 600px;
+  aspect-ratio: 4 / 5; 
   background-size: cover;
   background-position: center;
-  position: relative;
-}
-.thumb span {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(0,0,0,.8);
-  padding: 2px 6px;
-  font-size: 12px;
-  border-radius: 4px;
 }
 
 .tag {
@@ -66,22 +56,20 @@ body {
 <div class="container py-4">
 
 <!-- HEADER -->
-<div class="d-flex justify-content-between mb-4">
-  <div class="logo fs-3 fw-bold">Rush<span>Hub</span></div>
-  <span class="text-secondary">Discovery Piscine</span>
+<div class="d-flex justify-content-between mb-4"> <!-- flex layout ซ้าย–ขวา / mb-4 เว้นล่าง -->
+  <div class="logo fs-3 fw-bold">Rush<span>Hub</span></div> <!-- fs-3 = ขนาดใหญ่ --> <!-- fw-bold = ตัวหนา -->
 </div>
 
 <!-- CONTENT -->
-<div class="row g-4">
+<div class="row g-4"> <!-- g-4 = ช่องว่าง -->
 
   <!-- CARD -->
   <div class="col-md-6">
     <a href="cv_kjamornj.html" class="text-white text-decoration-none">
       <div class="card-box">
-        <div class="thumb" style="background-image:url('assets/img/kjamornj.jpg')">
-          <span>Profile</span>
-        </div>
-        <div class="p-3">
+        <div class="thumb" style="background-image:url('assets/img/kjamornj.jpg')"></div>
+        
+        <div class="p-3"> <!-- padding รอบข้อความ -->
           <b>Kittiphoom Jamornjindamanee</b><br>
           <span class="tag">Portfolio</span>
         </div>
@@ -93,9 +81,8 @@ body {
   <div class="col-md-6">
     <a href="cv_jyongha.html" class="text-white text-decoration-none">
       <div class="card-box">
-        <div class="thumb" style="background-image:url('assets/img/jyongha.jpg')">
-          <span>Profile</span>
-        </div>
+        <div class="thumb" style="background-image:url('assets/img/jyongha.jpg')"></div>
+      
         <div class="p-3">
           <b>jyongha Portfolio</b><br>
           <span class="tag">Portfolio</span>
