@@ -35,11 +35,3 @@ body {
   background-position: center;
   transition: transform .3s ease;
 }
-
-/* Showcase Images */
-.thumb-1 { background-image: url("assets/img/1.jpg"); }
-.thumb-2 { background-image: url("assets/img/2.jpg"); }
-.thumb-3 { background-image: url("assets/img/3.jpg"); }
-.thumb-4 { background-image: url("assets/img/4.jpg"); }
-.thumb-5 { background-image: url("assets/img/5.jpg"); }
-.thumb-6 { background-image: url("assets/img/6.jpg"); }
